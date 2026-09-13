@@ -37,14 +37,14 @@
         <h2>Catálogo de cursos</h2>
         <p class="subtitulo">Elegí una categoría para ver los cursos disponibles.</p>
 
-        <!-- Selector de categoría sin JavaScript: radio buttons + CSS -->
-        <div class="selector-categoria">
-          <input type="radio" name="categoria" id="tab-ingles" class="tab-input" checked>
-          <label for="tab-ingles" class="tab-label">Inglés</label>
+        <!-- Selector de categoría sin JavaScript: radio buttons + CSS.
+             IMPORTANTE: los inputs, labels y los grupos de cursos deben ser
+             hermanos directos (mismo padre) para que funcione el selector "~". -->
+        <input type="radio" name="categoria" id="tab-ingles" class="tab-input" checked>
+        <label for="tab-ingles" class="tab-label">Inglés</label>
 
-          <input type="radio" name="categoria" id="tab-frances" class="tab-input">
-          <label for="tab-frances" class="tab-label">Francés</label>
-        </div>
+        <input type="radio" name="categoria" id="tab-frances" class="tab-input">
+        <label for="tab-frances" class="tab-label">Francés</label>
 
         <!-- Cursos de Inglés -->
         <div class="grupo-cursos cursos-ingles">
