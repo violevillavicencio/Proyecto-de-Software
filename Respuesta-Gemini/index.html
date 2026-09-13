@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto de Idiomas LinguaGlobal</title>
+    <link rel="stylesheet" href="estilosA.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación principal -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="logo">LinguaGlobal</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#catalogo">Cursos</a></li>
+                    <li><a href="#nosotros">Quiénes Somos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Aprende Idiomas a tu Propio Ritmo</h2>
+            <p>Descubre nuestra oferta académica en Inglés y Francés con profesores nativos.</p>
+        </section>
+
+        <!-- Sección de Catálogo de Cursos -->
+        <section id="catalogo" class="catalogo-section">
+            <h2>Catálogo de Cursos</h2>
+            <p class="instruccion-filtro">Selecciona un idioma para filtrar las opciones:</p>
+
+            <!-- Sistema de filtrado solo con HTML y CSS -->
+            <div class="filtro-container">
+                <input type="radio" id="cat-todos" name="categoria" checked>
+                <label for="cat-todos" class="btn-filtro">Todos</label>
+
+                <input type="radio" id="cat-ingles" name="categoria">
+                <label for="cat-ingles" class="btn-filtro">Inglés</label>
+
+                <input type="radio" id="cat-frances" name="categoria">
+                <label for="cat-frances" class="btn-filtro">Francés</label>
+
+                <!-- Grilla de Cursos -->
+                <div class="cursos-grid">
+                    
+                    <!-- Cursos de Inglés -->
+                    <article class="curso-card curso-ingles estilo-borde-1">
+                        <h3>Inglés Básico A1-A2</h3>
+                        <p class="descripcion">Diseñado para principiantes. Aprende las estructuras fundamentales, vocabulario cotidiano y conversaciones básicas del día a día.</p>
+                        <a href="programas/programa-ingles-basico.pdf" class="btn-descarga" download>Descargar Programa</a>
+                    </article>
+
+                    <article class="curso-card curso-ingles estilo-borde-2">
+                        <h3>Inglés Intermedio B1-B2</h3>
+                        <p class="descripcion">Perfecciona tu fluidez verbal y comprensión auditiva. Enfocado en debates, redacción formal y comunicación profesional.</p>
+                        <a href="programas/programa-ingles-intermedio.pdf" class="btn-descarga" download>Descargar Programa</a>
+                    </article>
+
+                    <article class="curso-card curso-ingles estilo-borde-3">
+                        <h3>Inglés Avanzado C1</h3>
+                        <p class="descripcion">Domina el idioma a nivel nativo. Análisis de literatura, argumentación técnica y preparación para exámenes internacionales.</p>
+                        <a href="programas/programa-ingles-avanzado.pdf" class="btn-descarga" download>Descargar Programa</a>
+                    </article>
+
+                    <!-- Cursos de Francés -->
+                    <article class="curso-card curso-frances estilo-borde-1">
+                        <h3>Francés Inicial A1</h3>
+                        <p class="descripcion">Primeros pasos en la lengua francesa. Corrección fonética, presentaciones personales y expresiones cotidianas esenciales.</p>
+                        <a href="programas/programa-frances-basico.pdf" class="btn-descarga" download>Descargar Programa</a>
+                    </article>
+
+                    <article class="curso-card curso-frances estilo-borde-2">
+                        <h3>Francés Intermedio B1</h3>
+                        <p class="descripcion">Consolida tu gramática y amplía tu vocabulario cultural. Énfasis en comprensión de textos y expresión oral fluida.</p>
+                        <a href="programas/programa-frances-intermedio.pdf" class="btn-descarga" download>Descargar Programa</a>
+                    </article>
+
+                    <article class="curso-card curso-frances estilo-borde-3">
+                        <h3>Francés Avanzado B2-C1</h3>
+                        <p class="descripcion">Inmersión lingüística completa. Debate sobre temas de actualidad, literatura francófona y redacción académica avanzada.</p>
+                        <a href="programas/programa-frances-avanzado.pdf" class="btn-descarga" download>Descargar Programa</a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Quiénes Somos -->
+        <section id="nosotros" class="nosotros-section">
+            <div class="nosotros-card">
+                <h2>Sobre Nosotros</h2>
+                <p><strong>Instituto LinguaGlobal</strong> es una institución fundada en 2010 dedicada a la enseñanza y difusión de idiomas extranjeros.</p>
+                <p>Este sitio web es mantenido por el <em>Departamento de Tecnologías Educativas de LinguaGlobal</em>, un equipo multidisciplinario comprometido con brindar soluciones accesibles e innovadoras para estudiantes de todo el mundo.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contacto-section">
+            <h2>Contacto</h2>
+            <form class="contacto-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Ana Pérez">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="idioma-interes">Idioma de interés:</label>
+                    <select id="idioma-interes" name="idioma-interes">
+                        <option value="ingles">Inglés</option>
+                        <option value="frances">Francés</option>
+                        <option value="ambos">Ambos</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu consulta aquí..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Consulta</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2026 Instituto LinguaGlobal. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
