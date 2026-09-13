@@ -1,0 +1,370 @@
+/* =========================================================
+   estilosA.css
+   Hoja de estilos única para el sitio "Idiomas Global"
+   ========================================================= */
+
+/* ---------- Reset básico ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primario: #1d4e89;
+  --color-primario-oscuro: #123a66;
+  --color-secundario: #e8871e;
+  --color-fondo: #f7f9fb;
+  --color-fondo-alterno: #eef2f7;
+  --color-texto: #2b2f36;
+  --color-borde: #d6dde5;
+  --radio-borde: 8px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Verdana, Arial, sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  color: var(--color-primario-oscuro);
+  margin-bottom: 0.6em;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------- Encabezado / Navegación ---------- */
+.encabezado {
+  background-color: #ffffff;
+  border-bottom: 3px solid var(--color-primario);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.encabezado-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.8rem 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-primario);
+}
+
+.logo span {
+  color: var(--color-secundario);
+}
+
+.nav-principal ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-principal a {
+  color: var(--color-texto);
+  font-weight: 600;
+  padding: 0.4rem 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-principal a:hover {
+  color: var(--color-primario);
+  border-bottom: 2px solid var(--color-secundario);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--color-primario), var(--color-primario-oscuro));
+  color: #ffffff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+/* ---------- Secciones genéricas ---------- */
+.seccion {
+  padding: 3rem 0;
+}
+
+.seccion-alterna {
+  background-color: var(--color-fondo-alterno);
+}
+
+.subtitulo {
+  margin-bottom: 1.5rem;
+  color: #555b64;
+}
+
+/* ---------- Selector de categoría (solo HTML/CSS) ---------- */
+.selector-categoria {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Ocultamos los radio buttons reales y mostramos las etiquetas como pestañas */
+.tab-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.tab-label {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border: 2px solid var(--color-primario);
+  border-radius: 30px;
+  color: var(--color-primario);
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tab-label:hover {
+  background-color: #e6edf5;
+}
+
+.tab-input:checked + .tab-label {
+  background-color: var(--color-primario);
+  color: #ffffff;
+}
+
+/* Mostrar/ocultar grupos de cursos según la categoría elegida */
+.grupo-cursos {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+#tab-ingles:checked ~ .cursos-ingles {
+  display: grid;
+}
+
+#tab-frances:checked ~ .cursos-frances {
+  display: grid;
+}
+
+/* ---------- Tarjetas de cursos ----------
+   Cada curso usa un estilo distinto de border y padding
+   para demostrar variedad visual. */
+.curso {
+  background-color: #ffffff;
+  border-radius: var(--radio-borde);
+}
+
+.curso h3 {
+  font-size: 1.15rem;
+}
+
+.detalle-curso {
+  font-size: 0.9rem;
+  color: #555b64;
+  margin: 0.6rem 0 1rem 0;
+}
+
+.boton-descarga {
+  display: inline-block;
+  background-color: var(--color-secundario);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.boton-descarga:hover {
+  background-color: #c96f10;
+}
+
+/* Estilo 1: borde sólido grueso, padding amplio */
+.curso-estilo-1 {
+  border: 3px solid var(--color-primario);
+  padding: 2rem;
+}
+
+/* Estilo 2: borde punteado, padding medio */
+.curso-estilo-2 {
+  border: 2px dashed var(--color-secundario);
+  padding: 1.4rem;
+}
+
+/* Estilo 3: borde doble, padding chico + sombra */
+.curso-estilo-3 {
+  border: 4px double var(--color-primario-oscuro);
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Estilo 4: borde punteado fino, padding amplio */
+.curso-estilo-4 {
+  border: 1px dotted var(--color-primario-oscuro);
+  padding: 2rem;
+}
+
+/* Estilo 5: borde grueso solo inferior, padding medio */
+.curso-estilo-5 {
+  border: 1px solid var(--color-borde);
+  border-bottom: 6px solid var(--color-secundario);
+  padding: 1.5rem;
+}
+
+/* Estilo 6: borde sólido redondeado marcado, padding chico */
+.curso-estilo-6 {
+  border: 2px solid var(--color-secundario);
+  border-radius: 20px;
+  padding: 1rem 1.2rem;
+}
+
+/* ---------- Quiénes somos ---------- */
+.tarjeta-info {
+  background-color: #ffffff;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 1.8rem;
+}
+
+.lista-info {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.lista-info li {
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed var(--color-borde);
+}
+
+.lista-info li:last-child {
+  border-bottom: none;
+}
+
+/* ---------- Formulario de contacto ---------- */
+.formulario-contacto {
+  background-color: #ffffff;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.campo-formulario {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-formulario label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+  padding: 0.6rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+  outline: none;
+  border-color: var(--color-primario);
+}
+
+.boton-enviar {
+  background-color: var(--color-primario);
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton-enviar:hover {
+  background-color: var(--color-primario-oscuro);
+}
+
+/* ---------- Pie de página ---------- */
+.pie-pagina {
+  background-color: var(--color-primario-oscuro);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 768px) {
+  .encabezado-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-principal ul {
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .grupo-cursos {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario-contacto {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .selector-categoria {
+    flex-direction: column;
+  }
+
+  .tab-label {
+    text-align: center;
+  }
+}
