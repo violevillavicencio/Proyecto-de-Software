@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idiomas Global - Cursos de Inglés y Francés</title>
+  <link rel="stylesheet" href="estilosA.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado-flex">
+      <div class="logo">Idiomas<span>Global</span></div>
+      <nav class="nav-principal">
+        <ul>
+          <li><a href="#catalogo">Catálogo de cursos</a></li>
+          <li><a href="#nosotros">Quiénes somos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="contenedor">
+        <h1>Aprendé un nuevo idioma con nosotros</h1>
+        <p>Cursos de Inglés y Francés para todos los niveles, dictados por un equipo docente especializado.</p>
+      </div>
+    </section>
+
+    <!-- ===================== CATÁLOGO ===================== -->
+    <section id="catalogo" class="seccion">
+      <div class="contenedor">
+        <h2>Catálogo de cursos</h2>
+        <p class="subtitulo">Elegí una categoría para ver los cursos disponibles.</p>
+
+        <!-- Selector de categoría sin JavaScript: radio buttons + CSS -->
+        <div class="selector-categoria">
+          <input type="radio" name="categoria" id="tab-ingles" class="tab-input" checked>
+          <label for="tab-ingles" class="tab-label">Inglés</label>
+
+          <input type="radio" name="categoria" id="tab-frances" class="tab-input">
+          <label for="tab-frances" class="tab-label">Francés</label>
+        </div>
+
+        <!-- Cursos de Inglés -->
+        <div class="grupo-cursos cursos-ingles">
+
+          <article class="curso curso-estilo-1">
+            <h3>Inglés Básico A1</h3>
+            <p>Curso introductorio pensado para quienes nunca estudiaron inglés. Trabajamos vocabulario cotidiano, presentaciones personales y estructuras gramaticales elementales.</p>
+            <p class="detalle-curso"><strong>Duración:</strong> 8 semanas &middot; <strong>Modalidad:</strong> Virtual</p>
+            <a class="boton-descarga" href="programas/ingles-basico-a1.pdf" download>Descargar programa del curso</a>
+          </article>
+
+          <article class="curso curso-estilo-2">
+            <h3>Inglés Intermedio B1</h3>
+            <p>Profundizamos en tiempos verbales, comprensión de textos y conversación fluida sobre temas del día a día, trabajo y viajes.</p>
+            <p class="detalle-curso"><strong>Duración:</strong> 10 semanas &middot; <strong>Modalidad:</strong> Presencial</p>
+            <a class="boton-descarga" href="programas/ingles-intermedio-b1.pdf" download>Descargar programa del curso</a>
+          </article>
+
+          <article class="curso curso-estilo-3">
+            <h3>Inglés Avanzado C1</h3>
+            <p>Curso orientado a la fluidez académica y profesional: redacción de informes, debates y preparación para exámenes internacionales.</p>
+            <p class="detalle-curso"><strong>Duración:</strong> 12 semanas &middot; <strong>Modalidad:</strong> Mixta</p>
+            <a class="boton-descarga" href="programas/ingles-avanzado-c1.pdf" download>Descargar programa del curso</a>
+          </article>
+
+        </div>
+
+        <!-- Cursos de Francés -->
+        <div class="grupo-cursos cursos-frances">
+
+          <article class="curso curso-estilo-4">
+            <h3>Francés Básico A1</h3>
+            <p>Primeros pasos en el idioma francés: pronunciación, saludos, números y frases esenciales para desenvolverse en situaciones simples.</p>
+            <p class="detalle-curso"><strong>Duración:</strong> 8 semanas &middot; <strong>Modalidad:</strong> Virtual</p>
+            <a class="boton-descarga" href="programas/frances-basico-a1.pdf" download>Descargar programa del curso</a>
+          </article>
+
+          <article class="curso curso-estilo-5">
+            <h3>Francés Intermedio B1</h3>
+            <p>Ampliamos el vocabulario y la gramática para poder mantener conversaciones cotidianas y comprender textos de dificultad media.</p>
+            <p class="detalle-curso"><strong>Duración:</strong> 10 semanas &middot; <strong>Modalidad:</strong> Presencial</p>
+            <a class="boton-descarga" href="programas/frances-intermedio-b1.pdf" download>Descargar programa del curso</a>
+          </article>
+
+          <article class="curso curso-estilo-6">
+            <h3>Francés Avanzado C1</h3>
+            <p>Curso de perfeccionamiento con foco en literatura, actualidad francófona y preparación para certificaciones oficiales (DELF/DALF).</p>
+            <p class="detalle-curso"><strong>Duración:</strong> 12 semanas &middot; <strong>Modalidad:</strong> Mixta</p>
+            <a class="boton-descarga" href="programas/frances-avanzado-c1.pdf" download>Descargar programa del curso</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== QUIÉNES SOMOS ===================== -->
+    <section id="nosotros" class="seccion seccion-alterna">
+      <div class="contenedor">
+        <h2>Quiénes somos</h2>
+        <div class="tarjeta-info">
+          <p>Este sitio es mantenido por el <strong>Departamento de Idiomas de Instituto Global</strong>, una institución educativa ficticia dedicada a la enseñanza de idiomas extranjeros.</p>
+          <ul class="lista-info">
+            <li><strong>Responsable del sitio:</strong> Secretaría Académica - Instituto Global</li>
+            <li><strong>Correo de contacto:</strong> secretaria@idiomasglobal.example</li>
+            <li><strong>Domicilio:</strong> Calle Ficticia 123, La Plata, Buenos Aires, Argentina</li>
+            <li><strong>Horario de atención:</strong> Lunes a viernes de 9 a 18 hs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section id="contacto" class="seccion">
+      <div class="contenedor">
+        <h2>Contacto</h2>
+        <p class="subtitulo">¿Tenés dudas sobre nuestros cursos? Escribinos y te responderemos a la brevedad.</p>
+
+        <form class="formulario-contacto" action="#" method="get">
+          <div class="campo-formulario">
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="curso-interes">Curso de interés</label>
+            <select id="curso-interes" name="curso-interes">
+              <option value="ingles">Inglés</option>
+              <option value="frances">Francés</option>
+              <option value="otro">Otro / No estoy seguro</option>
+            </select>
+          </div>
+
+          <div class="campo-formulario">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta aquí"></textarea>
+          </div>
+
+          <button type="submit" class="boton-enviar">Enviar consulta</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <p>&copy; 2026 Instituto Global de Idiomas (sitio ficticio con fines de ejemplo).</p>
+    </div>
+  </footer>
+
+</body>
+</html>
