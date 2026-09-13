@@ -127,13 +127,10 @@ a {
   color: #555b64;
 }
 
-/* ---------- Selector de categoría (solo HTML/CSS) ---------- */
-.selector-categoria {
-  display: flex;
-  gap: 0.8rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
+/* ---------- Selector de categoría (solo HTML/CSS) ----------
+   Los inputs y las etiquetas son hermanos directos de los
+   .grupo-cursos (ver index.html): esto es imprescindible para
+   que el selector "~" de más abajo funcione. */
 
 /* Ocultamos los radio buttons reales y mostramos las etiquetas como pestañas */
 .tab-input {
@@ -146,6 +143,7 @@ a {
 .tab-label {
   display: inline-block;
   padding: 0.6rem 1.4rem;
+  margin: 0 0.8rem 2rem 0;
   border: 2px solid var(--color-primario);
   border-radius: 30px;
   color: var(--color-primario);
@@ -360,11 +358,9 @@ a {
 }
 
 @media (max-width: 480px) {
-  .selector-categoria {
-    flex-direction: column;
-  }
-
   .tab-label {
+    display: block;
     text-align: center;
+    margin: 0 0 0.8rem 0;
   }
 }
