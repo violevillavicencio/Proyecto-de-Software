@@ -1,0 +1,399 @@
+/* =========================================================
+   Instituto Puente — hoja de estilos
+   Paleta:
+     --tinta:        #202A2E  (texto principal)
+     --pergamino:    #F6F1E4  (fondo general)
+     --pergamino-2:  #EDE6D3  (fondo alterno)
+     --azul-atlantico:#1F3F52 (acento principal / Inglés)
+     --verde-borgoña: #4C6B4F (acento secundario / Francés)
+     --oro-viejo:    #B8863B (detalles, enlaces)
+   Tipografía: "Iowan Old Style"/serif para títulos, sans-serif de sistema para cuerpo.
+   ========================================================= */
+
+:root {
+  --tinta: #202a2e;
+  --pergamino: #f6f1e4;
+  --pergamino-2: #ede6d3;
+  --azul-atlantico: #1f3f52;
+  --verde-borgona: #4c6b4f;
+  --oro-viejo: #a5701f;
+  --borde-suave: #d8cdb0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--pergamino);
+  color: var(--tinta);
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  margin-top: 0;
+  color: var(--azul-atlantico);
+}
+
+a {
+  color: var(--oro-viejo);
+}
+
+a:focus,
+button:focus,
+input:focus {
+  outline: 3px solid var(--oro-viejo);
+  outline-offset: 2px;
+}
+
+.contenedor {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------- Encabezado y navegación ---------- */
+
+.encabezado {
+  background-color: var(--azul-atlantico);
+  color: var(--pergamino);
+  padding: 1.1rem 0;
+  border-bottom: 6px solid var(--oro-viejo);
+}
+
+.encabezado .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.marca {
+  font-family: Georgia, "Iowan Old Style", serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  color: var(--pergamino);
+}
+
+.marca span {
+  color: #d9b877;
+}
+
+.nav-principal ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-principal a {
+  color: var(--pergamino);
+  text-decoration: none;
+  font-size: 1.02rem;
+  padding: 0.3rem 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-principal a:hover,
+.nav-principal a:focus {
+  border-bottom: 2px solid var(--oro-viejo);
+}
+
+/* ---------- Portada ---------- */
+
+.portada {
+  padding: 3.5rem 0 3rem;
+  border-bottom: 1px solid var(--borde-suave);
+}
+
+.portada h1 {
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  max-width: 34ch;
+}
+
+.portada p {
+  max-width: 56ch;
+  font-size: 1.08rem;
+}
+
+/* ---------- Secciones generales ---------- */
+
+.seccion {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--borde-suave);
+}
+
+.seccion:last-of-type {
+  border-bottom: none;
+}
+
+.seccion h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.4rem;
+}
+
+.intro-seccion {
+  max-width: 60ch;
+  margin-bottom: 2rem;
+  color: #3d4750;
+}
+
+/* ---------- Selector de categoría (solo CSS) ---------- */
+
+.selector-categoria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--borde-suave);
+  background-color: var(--pergamino-2);
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+}
+
+.selector-categoria input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.selector-categoria label {
+  cursor: pointer;
+  padding: 0.55rem 1.3rem;
+  border: 1px solid var(--borde-suave);
+  border-radius: 0.3rem;
+  background-color: var(--pergamino);
+  font-weight: 600;
+  color: var(--azul-atlantico);
+}
+
+#cat-ingles:checked ~ .selector-categoria label[for="cat-ingles"],
+#cat-frances:checked ~ .selector-categoria label[for="cat-frances"] {
+  background-color: var(--azul-atlantico);
+  color: var(--pergamino);
+  border-color: var(--azul-atlantico);
+}
+
+#cat-frances:checked ~ .selector-categoria label[for="cat-frances"] {
+  background-color: var(--verde-borgona);
+  border-color: var(--verde-borgona);
+}
+
+/* Mostrar/ocultar el bloque de cursos correspondiente */
+
+.bloque-cursos {
+  display: none;
+}
+
+#cat-ingles:checked ~ #cursos-ingles,
+#cat-frances:checked ~ #cursos-frances {
+  display: block;
+}
+
+/* ---------- Tarjetas de curso ---------- */
+
+.rejilla-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+}
+
+.curso {
+  background-color: #fffdf7;
+  padding: 1.4rem;
+}
+
+.curso h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.curso p {
+  margin: 0 0 1rem;
+  color: #3d4750;
+}
+
+.curso .descarga {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--oro-viejo);
+  border-bottom: 1px solid var(--oro-viejo);
+}
+
+.curso .descarga:hover {
+  color: var(--azul-atlantico);
+  border-bottom-color: var(--azul-atlantico);
+}
+
+/* Estilos de tarjeta variados a propósito (borde/padding distintos) */
+
+#cursos-ingles .curso:nth-child(1) {
+  border: 1px solid var(--azul-atlantico);
+  border-left: 8px solid var(--azul-atlantico);
+  padding: 1.6rem;
+}
+
+#cursos-ingles .curso:nth-child(2) {
+  border: 2px dashed var(--azul-atlantico);
+  padding: 1.1rem;
+}
+
+#cursos-ingles .curso:nth-child(3) {
+  border: 3px double var(--azul-atlantico);
+  padding: 2rem 1.4rem;
+}
+
+#cursos-ingles .curso:nth-child(4) {
+  border-top: 4px solid var(--azul-atlantico);
+  border-bottom: 4px solid var(--azul-atlantico);
+  padding: 1.3rem 1.4rem;
+}
+
+#cursos-frances .curso:nth-child(1) {
+  border: 1px solid var(--verde-borgona);
+  border-radius: 0.9rem;
+  padding: 1.5rem;
+}
+
+#cursos-frances .curso:nth-child(2) {
+  border: 2px solid var(--verde-borgona);
+  border-right: 8px solid var(--verde-borgona);
+  padding: 1.2rem;
+}
+
+#cursos-frances .curso:nth-child(3) {
+  border: 2px dotted var(--verde-borgona);
+  padding: 1.8rem 1.2rem;
+}
+
+#cursos-frances .curso:nth-child(4) {
+  border: 1px solid var(--verde-borgona);
+  padding: 1rem;
+  box-shadow: 6px 6px 0 var(--pergamino-2);
+}
+
+/* ---------- Quiénes somos ---------- */
+
+.equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta-persona {
+  background-color: var(--pergamino-2);
+  border-left: 5px solid var(--oro-viejo);
+  padding: 1.2rem 1.4rem;
+}
+
+.tarjeta-persona h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.tarjeta-persona .rol {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--verde-borgona);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* ---------- Contacto ---------- */
+
+.formulario-contacto {
+  max-width: 34rem;
+  background-color: var(--pergamino-2);
+  border: 1px solid var(--borde-suave);
+  padding: 1.8rem;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.campo {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.campo label {
+  font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  font: inherit;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--borde-suave);
+  border-radius: 0.3rem;
+  background-color: #fffdf7;
+  color: var(--tinta);
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.boton-enviar {
+  justify-self: start;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.7rem 1.6rem;
+  background-color: var(--azul-atlantico);
+  color: var(--pergamino);
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.boton-enviar:hover {
+  background-color: var(--verde-borgona);
+}
+
+/* ---------- Pie de página ---------- */
+
+.pie {
+  background-color: var(--azul-atlantico);
+  color: var(--pergamino);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+.pie a {
+  color: #d9b877;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 40rem) {
+  .encabezado .contenedor {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-principal ul {
+    gap: 1rem;
+  }
+
+  .selector-categoria {
+    flex-direction: column;
+  }
+
+  .formulario-contacto {
+    padding: 1.2rem;
+  }
+}

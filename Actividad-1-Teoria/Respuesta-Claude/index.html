@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instituto Puente — Cursos de idiomas</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor">
+    <p class="marca">Instituto <span>Puente</span></p>
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#catalogo">Catálogo de cursos</a></li>
+        <li><a href="#quienes-somos">Quiénes somos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="portada">
+  <div class="contenedor">
+    <h1>Aprender un idioma es abrir una puerta a otro modo de pensar.</h1>
+    <p>Instituto Puente dicta cursos presenciales y a distancia de inglés y francés, con grupos reducidos y programas de estudio descargables para cada nivel.</p>
+  </div>
+</section>
+
+<section class="seccion" id="catalogo">
+  <div class="contenedor">
+    <h2>Catálogo de cursos</h2>
+    <p class="intro-seccion">Elegí un idioma para ver los cursos disponibles, su descripción y el programa correspondiente.</p>
+
+    <!-- Selector de categoría sin JavaScript: radio buttons + selectores CSS -->
+    <input type="radio" name="categoria" id="cat-ingles" checked>
+    <input type="radio" name="categoria" id="cat-frances">
+
+    <div class="selector-categoria">
+      <label for="cat-ingles">Inglés</label>
+      <label for="cat-frances">Francés</label>
+    </div>
+
+    <div class="bloque-cursos" id="cursos-ingles">
+      <div class="rejilla-cursos">
+
+        <article class="curso">
+          <h3>Inglés Inicial A1</h3>
+          <p>Primer contacto con el idioma: presentaciones, rutinas diarias y frases básicas para desenvolverse en situaciones cotidianas.</p>
+          <a class="descarga" href="programas/ingles-inicial-a1.pdf">Descargar programa del curso</a>
+        </article>
+
+        <article class="curso">
+          <h3>Inglés Intermedio B1</h3>
+          <p>Consolidación gramatical y ampliación de vocabulario para mantener conversaciones fluidas sobre temas laborales y de viaje.</p>
+          <a class="descarga" href="programas/ingles-intermedio-b1.pdf">Descargar programa del curso</a>
+        </article>
+
+        <article class="curso">
+          <h3>Inglés Avanzado C1</h3>
+          <p>Perfeccionamiento oral y escrito orientado a exámenes internacionales y al desempeño en entornos profesionales exigentes.</p>
+          <a class="descarga" href="programas/ingles-avanzado-c1.pdf">Descargar programa del curso</a>
+        </article>
+
+        <article class="curso">
+          <h3>Inglés de Negocios</h3>
+          <p>Vocabulario y prácticas de comunicación para reuniones, correos y negociaciones en contextos corporativos.</p>
+          <a class="descarga" href="programas/ingles-de-negocios.pdf">Descargar programa del curso</a>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="bloque-cursos" id="cursos-frances">
+      <div class="rejilla-cursos">
+
+        <article class="curso">
+          <h3>Francés Inicial A1</h3>
+          <p>Pronunciación, saludos y estructuras simples para comenzar a comunicarse en francés desde la primera clase.</p>
+          <a class="descarga" href="programas/frances-inicial-a1.pdf">Descargar programa del curso</a>
+        </article>
+
+        <article class="curso">
+          <h3>Francés Intermedio B1</h3>
+          <p>Ampliación del vocabulario cotidiano y práctica de conversación para ganar soltura en situaciones diversas.</p>
+          <a class="descarga" href="programas/frances-intermedio-b1.pdf">Descargar programa del curso</a>
+        </article>
+
+        <article class="curso">
+          <h3>Francés Avanzado C1</h3>
+          <p>Análisis de textos, debate y redacción para quienes buscan un dominio profundo del idioma.</p>
+          <a class="descarga" href="programas/frances-avanzado-c1.pdf">Descargar programa del curso</a>
+        </article>
+
+        <article class="curso">
+          <h3>Francés para Viajeros</h3>
+          <p>Curso breve enfocado en frases prácticas para moverse, alojarse y comer durante un viaje por países francófonos.</p>
+          <a class="descarga" href="programas/frances-para-viajeros.pdf">Descargar programa del curso</a>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="seccion" id="quienes-somos">
+  <div class="contenedor">
+    <h2>Quiénes mantienen este sitio</h2>
+    <p class="intro-seccion">El sitio y los contenidos del catálogo son administrados por el siguiente equipo.</p>
+
+    <div class="equipo">
+      <div class="tarjeta-persona">
+        <h3>Marina Sosa</h3>
+        <span class="rol">Coordinación académica</span>
+        <p>Responsable de los programas de estudio y de la actualización del catálogo de cursos.</p>
+      </div>
+
+      <div class="tarjeta-persona">
+        <h3>Ezequiel Rearte</h3>
+        <span class="rol">Administración del sitio</span>
+        <p>A cargo del mantenimiento técnico de esta página y de la publicación de los materiales descargables.</p>
+      </div>
+
+      <div class="tarjeta-persona">
+        <h3>Instituto Puente</h3>
+        <span class="rol">Institución</span>
+        <p>Escuela de idiomas fundada en 2010, dedicada a la enseñanza de inglés y francés en modalidad presencial y a distancia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="contacto">
+  <div class="contenedor">
+    <h2>Contacto</h2>
+    <p class="intro-seccion">Completá el formulario para consultar por inscripciones, horarios o cualquier otra duda.</p>
+
+    <form class="formulario-contacto" action="#" method="post">
+      <div class="campo">
+        <label for="nombre">Nombre y apellido</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+
+      <div class="campo">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="campo">
+        <label for="idioma-interes">Idioma de interés</label>
+        <select id="idioma-interes" name="idioma-interes">
+          <option value="ingles">Inglés</option>
+          <option value="frances">Francés</option>
+          <option value="no-se">Todavía no lo decidí</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+      </div>
+
+      <button type="submit" class="boton-enviar">Enviar consulta</button>
+    </form>
+  </div>
+</section>
+
+<footer class="pie">
+  <div class="contenedor">
+    <p>Instituto Puente · Cursos de inglés y francés · <a href="#contacto">Escribinos</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
